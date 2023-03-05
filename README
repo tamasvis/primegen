@@ -1,0 +1,34 @@
+Auxiliary files to error-inject specific non-primes into RSA key generation
+(primality filtering)
+
+Our pregenerated pseudoprimes for cryptographically relevant prime
+bitcounts are organized as:
+
+carmichael.txt    -- Carmichael numbers, which pass the Fermat primality test
+                  -- (main file)
+carmichael2.txt   -- archived additional examples
+
+mrabin.txt        -- pseudoprimes to the first primes as bases (main file)
+mrabin2.txt       -- archived additional examples
+
+ym1divexpn.txt    -- probable primes which would pass FIPS 186-4/5 primality
+                  -- tests, but must be rejected since E=0x10001|P-1
+                  -- (which would be RSA-invalid)
+
+
+References; see also per-file citations:
+
+Carmichael numbers:
+    Chernick: On Fermat's simple theorem
+    Bulletin AMS, Vol. 45, nr. 4, 1939
+    www.ams.org/journals/bull/1939-45-04/
+        S0002-9904-1939-06953-X/S0002-9904-1939-06953-X.pdf
+    [accessed 2023-03-04]
+
+Pseudoprimes:
+    Arnault: Constructing Carmichael numbers which are strong pseudoprimes
+    to several bases
+    J. Symbolic Computation, v. 20, 1995
+    core.ac.uk/download/pdf/81930829.pdf
+    [accessed 2023-03-04]
+
