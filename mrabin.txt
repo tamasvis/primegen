@@ -17,7 +17,7 @@ K2 = 977, K3 = 997 in our examples.
 
 Entries include preceding+subsequent-first primes, in case used to
 test prime search. MIN.WITNESS=... is the smallest integer which is a
-Miller-Rabin withess for U3 being composite.
+Miller-Rabin witness for U3 being composite.
 
 ----  506 bits P1 -> 1536-bit pseudoprime ------------------------------------
 P3=0x90c8d902e9bb4f883619037466a2c5c4c347d0112c3dac99a2b8b625772a7bb059ef66aceaf49f3622d682678c7c9aad16d18d6ec8336b413dda47b1e4825d0d3

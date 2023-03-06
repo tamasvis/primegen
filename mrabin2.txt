@@ -2,7 +2,7 @@ Miller-Rabin pseudoprimes, form
     U3 = P1 * (K2 * (P1 -1) +1) * (K3 * (P1 -1) +1)
               ^^^^^^ P2 ^^^^^^^   ^^^^^^ P3 ^^^^^^^
 
-Leftover list: we restrict main file to ~100 entries per size.
+Leftover list: we restrict main file to ~100 entries per prime size.
 
 P1 has been selected from a sequence mod M such that if P1,P2,P3 are
 all prime, the product passes Miller-Rabin tests with small integers
@@ -17,7 +17,7 @@ see
 
 Entries include preceding+subsequent-first primes, in case used to
 test prime search. MIN.WITNESS=... is the smallest integer which is a
-Miller-Rabin withess for U3 being composite.
+Miller-Rabin witness for U3 being composite.
 
 ----  335 bits P1 -> 1024-bit pseudoprime ------------------------------------
 
