@@ -1,19 +1,21 @@
 Auxiliary files to error-inject specific non-primes into RSA key generation
 (primality filtering)
 
-Our pregenerated pseudoprimes for cryptographically relevant prime
+
+Pregenerated pseudoprimes for cryptographically relevant prime
 bitcounts are organized as:
 
 carmichael.txt    -- Carmichael numbers, which pass the Fermat primality test
                   -- (main file)
 carmichael2.txt   -- archived additional examples
 
-mrabin.txt        -- pseudoprimes to the first primes as bases (main file)
+mrabin.txt        -- pseudoprimes not detected as composites by Miller-Rabin,
+                     with the first several primes as bases (main file)
 mrabin2.txt       -- archived additional examples
 
 ym1divexpn.txt    -- probable primes which would pass FIPS 186-4/5 primality
                   -- tests, but must be rejected since E=0x10001|P-1
-                  -- (which would be RSA-invalid)
+                  -- (would be RSA-invalid with public exponent E)
 
 
 References; see also per-file citations:
