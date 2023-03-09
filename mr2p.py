@@ -18,7 +18,7 @@ if __name__ == '__main__':
 		elif ('P3=' in p):
 			p3 = int(p[ p.index('=')+1 : ], 16)
 			assert((p3 & 1) == 1)
-			p1 = (p3 -1) // k3
+			p1 = (p3 -1) // k3 +1
 
 		else:
 			assert(0)
