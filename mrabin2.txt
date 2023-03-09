@@ -19,8 +19,6 @@ Entries include preceding+subsequent-first primes, in case used to
 test prime search. MIN.WITNESS=... is the smallest integer which is a
 Miller-Rabin witness for U3 being composite.
 
-----  335 bits P1 -> 1024-bit pseudoprime ------------------------------------
-
 ----  506 bits P1 -> 1536-bit pseudoprime ------------------------------------
 P3=0x90c8d9039a7a5c83673f725e91f2fd70050889ef6edf5740c0a9393a1a7ae8ad94195641f0ca09a0889ab26c0ed0e654e6ed859805ef7881345880231d6e892b3
 P=0xba71f39c6feb162461786e19134901725dd0f3b932fcbddefef0885f56a2ea5049b12b97a781e672e0b7e9b509466d72a5c76f6e0fa24c54cb0bbe57f65fd410f7bdca4a3f8894fe5986b237043217c7a7432b5d27296fc3e92641dafe0bc0447cecb890ed4da61f8f798944c95ca6fbc64ef7d2f7590d4dbb366e6104dc84be6209d929be6d53034734fad88b03b875f294b1d1653247c25a51d99b8210349b69582cf1580c7af677fcb8f0e3adb82a61c12af3107eb2ad9b52acf9e7d2f03b
