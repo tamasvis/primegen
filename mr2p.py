@@ -13,17 +13,17 @@ if __name__ == '__main__':
 		if 'P1=' in p:
 			p1 = int(p[ p.index('=')+1 : ], 16)
 			assert((p1 & 1) == 1)
-		else:
-			p3 = int(p[ p.index('=')+1 : ], 16)
-			assert((p3 & 1) == 1)
-
-		if p1:
 			p2 = k2 * (p - 1) +1
 			p3 = k3 * (p - 1) +1
-		else:
-			assert(((p3 -1) % k3) == 0)
+
+		elif ('P3=' in p):
+			p3 = int(p[ p.index('=')+1 : ], 16)
+			assert((p3 & 1) == 1)
 			p  = (p3 -1) // k3
 			p2 = k2 * (p - 1) +1
+
+		else:
+			assert(0)
 
 		u = p * p2 * p3
 		print(f'P1=0x{ p  :x}')
