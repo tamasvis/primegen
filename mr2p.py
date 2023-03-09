@@ -7,14 +7,26 @@ k2, k3 = 977, 997
 if __name__ == '__main__':
 	all = list(l.rstrip('\n') for l in fileinput.input())
 
-	p1 = list(int(re.sub('.*=0x', '', l), 16)
-			for l in all  if ('P1=' in l))
-	for p in p1:
-		assert((p & 1) == 1)
-		p2 = k2 * (p - 1) +1
-		p3 = k3 * (p - 1) +1
+	ps = list(l  for l in all  if (('P1=' in l) or ('P3=' in l)))
+	for p in ps:
+		p1, p3 = 0, 0
+		if 'P1=' in p:
+			p1 = int(p[ p.index('=')+1 : ], 16)
+			assert((p1 & 1) == 1)
+		else:
+			p3 = int(p[ p.index('=')+1 : ], 16)
+			assert((p3 & 1) == 1)
+
+		if p1:
+			p2 = k2 * (p - 1) +1
+			p3 = k3 * (p - 1) +1
+		else:
+			assert(((p3 -1) % k3) == 0)
+			p  = (p3 -1) // k3
+			p2 = k2 * (p - 1) +1
 
 		u = p * p2 * p3
-		print(f'P1=0x{ p :x}')
+		print(f'P1=0x{ p  :x}')
+		print(f'P3=0x{ p3 :x}')
 		print(f'P=0x{ u :x}')
 
