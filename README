@@ -13,6 +13,10 @@ mrabin.txt        -- pseudoprimes not detected as composites by Miller-Rabin,
                      with the first several primes as bases (main file)
 mrabin2.txt       -- archived additional examples
 
+mrworstcase.txt   -- worst-case inputs to Miller-Rabin: semiprimes of
+                  -- the form (2x+1)*(4x+1) which get accepted with 1/4
+                  -- probability by random Miller-Rabin witnesses.
+
 ym1divexpn.txt    -- probable primes which would pass FIPS 186-4/5 primality
                   -- tests, but must be rejected since E=0x10001|P-1
                   -- (would be RSA-invalid with public exponent E)
