@@ -1,0 +1,33 @@
+## C3 = Carmichael number of the form (60h + 43) (180h + 127) * (300h + 211)
+##   - all terms are primes, 3 mod 4
+##   - from Chernick Carmichael(3) form (15k +13) (45k +37) * (75k + 61)
+##     - k = 4*h + 2, which results in 3 mod 4
+##
+## see Rabin: Probabilistic algorithm for testing primality
+##   section 1, p. 133
+##   Journal of Number Theory, 12, 128-138, 1980
+##   www.sciencedirect.com/science/article/pii/0022314X80900840
+##   [accessed 2023-10-11]
+
+
+## ## snippet to reassemble x values into xes[]:
+##
+## import re, fileinput
+## r, a, b, xes = 0, 0, 0, []
+##
+## for l in fileinput.input():
+##     if ('R=' in l):                           ## R=...decimal...
+##         r = int(re.search('R=(\d+)', l).group(1))
+##     elif l.startswith('A=x'):                 ## ^A=x...hex...
+##         a = int(re.search('\S+', l[3:]).group(0), 16)
+##     elif l.startswith(' ') and a and r:       ## ^  x...hex...  ...
+##         for b in (int(v[1:], 16) for v in l.split()):
+##             xes.append( (a << r) + b )
+
+## C3 Carmichael numbers
+## adv 15816
+p=0x256d6bdbed6a934ee12cb0d7615d9558ed2dd0395991cb058c08905ea31690009097c060075ade86bdd87f6de37f38da1652ebea9a2a9316a349ba4181452a37611a010ffeb9a13d25997106b50d637dd5e15c996e7
+q=0x70484393c83fb9eca38612862418c00ac78970ac0cb56110a419b11be943b001b1c7412016109b9439897e49aa7daa8e42f8c3bfce7fb943e9dd2ec483cf7ea6234e032ffc2ce3b770cc53141f282a7981a415cc4b3
+r=0xbb231b4ba314e08a65df7434e6d3eabca1e5111ebfd8f71bbc2ad1d92f70d002d2f6c1e024c658a1b53a7d25717c1c426f9e9b9502d4df713070a3478659d314e582054ff9a02631bbff35218942f1752d66ceff27f
+C3=0xc00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ded531e33b21fbc15065e81f48c77d40871e91bf1dea53af01d8f40f18057462d48c99ac58df9d95651b401eaba64491ec985cba05ddf9a16ec3e04352030a7821e5a23d72338ed09d05129ffbbd6d7e192cf58d45ad8e0f4f09553cd37bae4c16d8795446b1a7ee341865b14ec718870af74281d36e7815045a7d729763b33639aea2ef64735933db34037e3004339f962ec2eddcd7b071d6d5b99b9b3d3affbc66cd104ff484991e0e0a51cfb
+
